@@ -5,6 +5,6 @@ const protect = require('../middleware/authMiddleware')
 
 router.get('/datos', protect, misDatos) //Pide un token, ahora esta protegida
 router.post('/login', login)
-router.post('/', registrar)
+router.post('/',protect, registrar)
 
 module.exports = router

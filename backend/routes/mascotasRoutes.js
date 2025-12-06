@@ -4,8 +4,8 @@ const { getMascotas, createMascota, updateMascota, deleteMascota } = require('..
 //Protejo todas las tareas
 const protect = require('../middleware/authMiddleware')
 
-router.get('/', getMascotas)
-router.post('/', createMascota)
+router.get('/', protect, getMascotas)
+router.post('/', protect, createMascota)
 
 //*TODO: recordar protegerlos despues de terminar las pruebas
 router.put('/:id', protect,  updateMascota)
