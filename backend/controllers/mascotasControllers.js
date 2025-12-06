@@ -8,7 +8,7 @@ const getMascotas = asyncHandler(async (req, res) => {
 
 const createMascota = asyncHandler(async (req, res) => {
     // validar manualmente:
-    const { nombre, edad, especie, raza, fechaNacimiento, sexo, estadoEsterilizacion, peso, propietario } = req.body
+    const { nombre, edad, especie, raza, fechaNacimiento, sexo, estadoEsterilizacion, peso, propietario, telefono } = req.body
     if (!nombre || !edad || !especie || !raza || !fechaNacimiento || !sexo || estadoEsterilizacion === undefined || !peso || !propietario ||!telefono) {
         res.status(400)
         throw new Error('Todos los campos obligatorios deben ser llenados')
