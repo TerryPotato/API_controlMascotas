@@ -18,6 +18,7 @@ const createMascota = asyncHandler(async (req, res) => {
     res.status(201).json({
     message: "Mascota creada exitosamente. Datos de la mascota creada:",
     mascota: mascota
+    })
 })
 
 const updateMascota = asyncHandler(async (req, res) => {
