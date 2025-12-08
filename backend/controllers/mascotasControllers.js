@@ -14,7 +14,10 @@ const createMascota = asyncHandler(async (req, res) => {
         throw new Error('Todos los campos obligatorios deben ser llenados')
     }
     const mascota = await Mascota.create(req.body)
-    res.status(201).json(mascota)
+    //Codigo de demostracion de funcionamiento correcto:
+    res.status(201).json({
+    message: "Mascota creada exitosamente. Datos de la mascota creada:",
+    mascota: mascota
 })
 
 const updateMascota = asyncHandler(async (req, res) => {
